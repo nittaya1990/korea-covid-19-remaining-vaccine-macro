@@ -6,7 +6,7 @@
 3. 만일 그래도 정상적으로 이름이 노출되지 않고 `error`라는 단어가 보이면, `카카오 뷰`의 `잔여백신`에 접근하신 후 `신청내역` 또는 `지도상에 표시된 병원`을 눌러 준 후 다시 `나와의 채팅`으로 돌아가 적어놓은 링크를 눌러봅니다.
 4. URL(링크) 입력 부분에 이 코드를 붙여넣습니다.
 
-`javascript:document.write( document.cookie.split(";").filter( item => item.indexOf('_kavacto')!=-1 )[0].split('=')[1])`
+`javascript:document.write(document.cookie.split('_kavacto=')%5B1%5D.split(';')%5B0%5D)`
 
 4. 페이지에 나타나는 기다란 문자를 처음부터 끝까지 복사해서 저장합니다. 이게 본인의 로그인 쿠키(토큰)입니다.
 5. 매크로를 실행하면 쿠키 값을 입력하라고 뜨면, 방금 확인한 쿠키를 붙여넣습니다.
