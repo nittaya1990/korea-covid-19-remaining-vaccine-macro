@@ -37,8 +37,7 @@ def check_user_info_loaded(jar):
             print(f"{user_info['name']}님은 백신을 예약하고 방문하지 않은 사용자로 파악됩니다. 잔여백신 예약이 불가합니다.")
             close(success=None)
         elif user_info['status'] == "ALREADY_RESERVED" or user_info['status'] == "ALREADY_VACCINATED":
-            print(f"{user_info['name']}님은 이미 예약 또는 접종이 완료된 사용자입니다.")
-            close(success=None)
+            print(f"{user_info['name']}님은 이미 한번 이상 예약 또는 접종이 완료된 사용자입니다. 잔여백신 예약이 진행되지 않을 수 있습니다.")
         else:
             print(f"알려지지 않은 상태 코드입니다. 상태코드:{user_info['status']}")
             print("상태 코드 정보와 함께 Issues 생성 부탁드립니다.")
